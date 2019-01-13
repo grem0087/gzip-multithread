@@ -1,0 +1,6 @@
+bin
+obj
+InstallUtil.InstallLog
+*.suo
+*.user
+/~$Формы.docx
