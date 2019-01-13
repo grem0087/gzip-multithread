@@ -1,4 +1,4 @@
-﻿namespace VeemExercise.Infrastructure
+﻿namespace VeemExercise.Infrastructure.DataContainers
 {
     internal class CompressedData : DecompressedData
     {

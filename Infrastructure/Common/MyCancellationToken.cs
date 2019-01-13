@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VeemExercise.Infrastructure
+namespace VeemExercise.Infrastructure.Common
 {
     public class MyCancellationToken
     {

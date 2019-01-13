@@ -1,4 +1,6 @@
-﻿namespace VeemExercise.Infrastructure.Interfaces
+﻿using VeemExercise.Infrastructure.Common;
+
+namespace VeemExercise.Infrastructure.Interfaces
 {
     interface IGZipPackager
     {

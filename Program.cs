@@ -38,7 +38,7 @@ namespace VeemExercise
                 new GZipService(command.InputFilename, command.OutputFilename, _iGZipPackager, _cancellationToken)
                     .Start();
 
-                Console.WriteLine("Work finished");
+                Console.WriteLine("Work finished. Hit Enter to quit");
                 Console.ReadLine();
             }
             catch (Exception ex)
@@ -52,7 +52,7 @@ namespace VeemExercise
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs ex)
         {
             var exception = (Exception)ex.ExceptionObject;
-            Console.WriteLine($"Error: {exception.Message}");
+            Console.WriteLine($"Unhandled Exception: {exception.Message}");
             Console.ReadLine();
         }
 

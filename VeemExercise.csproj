@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>VeemExercise</RootNamespace>
     <AssemblyName>VeemExercise</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -97,8 +97,9 @@
     <Compile Include="Infrastructure\Commands\Command.cs" />
     <Compile Include="Infrastructure\Commands\CommandTypes.cs" />
     <Compile Include="Infrastructure\Commands\CommandValidator.cs" />
-    <Compile Include="Infrastructure\CompressedData.cs" />
-    <Compile Include="Infrastructure\DecompressedData.cs" />
+    <Compile Include="Infrastructure\DataContainers\CompressedData.cs" />
+    <Compile Include="Infrastructure\Common\ConsoleIndicator.cs" />
+    <Compile Include="Infrastructure\DataContainers\DecompressedData.cs" />
     <Compile Include="Infrastructure\GZipService.cs" />
     <Compile Include="Infrastructure\GZipCompressor.cs" />
     <Compile Include="Infrastructure\GZipDecompressor.cs" />
@@ -106,7 +107,7 @@
     <Compile Include="Infrastructure\Interfaces\IGZipPackager.cs" />
     <Compile Include="Infrastructure\Interfaces\IObjectWithId.cs" />
     <Compile Include="Infrastructure\BufferStorage.cs" />
-    <Compile Include="Infrastructure\MyCancellationToken.cs" />
+    <Compile Include="Infrastructure\Common\MyCancellationToken.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

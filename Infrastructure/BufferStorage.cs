@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using VeemExercise.Infrastructure.Common;
 using VeemExercise.Infrastructure.Interfaces;
 
 namespace VeemExercise.Infrastructure
@@ -10,7 +11,7 @@ namespace VeemExercise.Infrastructure
     {
         private object locker = new object();
         private Dictionary<int, T> _storage = new Dictionary<int, T>();
-        private bool _isInputOpen = true;
+        private bool _isOpen = true;
         private volatile int writeBlockId = 0;
         private volatile int readBlockId = 0;
         private MyCancellationToken _cancellationToken;
@@ -50,12 +51,12 @@ namespace VeemExercise.Infrastructure
             {
                 T result;
 
-                if (_storage.Count() == 0 && !_isInputOpen)
+                if (_storage.Count() == 0 && !_isOpen)
                 {
                     return default(T);
                 }
 
-                while (!_storage.ContainsKey(readBlockId) && _isInputOpen)
+                while (!_storage.ContainsKey(readBlockId) && _isOpen)
                 {
                     Monitor.Wait(locker);
                 }
@@ -71,7 +72,7 @@ namespace VeemExercise.Infrastructure
         {
             lock (locker)
             {
-                _isInputOpen = false;
+                _isOpen = false;
                 Monitor.PulseAll(locker);
             }
         }
