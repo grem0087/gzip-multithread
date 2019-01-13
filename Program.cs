@@ -1,6 +1,8 @@
 ﻿using System;
 using VeemExercise.Infrastructure;
 using VeemExercise.Infrastructure.Commands;
+using VeemExercise.Infrastructure.Common;
+using VeemExercise.Infrastructure.DataContainers;
 using VeemExercise.Infrastructure.Interfaces;
 
 namespace VeemExercise
@@ -37,9 +39,6 @@ namespace VeemExercise
 
                 new GZipService(command.InputFilename, command.OutputFilename, _iGZipPackager, _cancellationToken)
                     .Start();
-
-                Console.WriteLine("Work finished. Hit Enter to quit");
-                Console.ReadLine();
             }
             catch (Exception ex)
             {

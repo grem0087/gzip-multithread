@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using VeemExercise.Infrastructure.Common;
 using VeemExercise.Infrastructure.Interfaces;
 
 namespace VeemExercise.Infrastructure
@@ -43,6 +44,9 @@ namespace VeemExercise.Infrastructure
             {
                 thread.Join();
             }
+
+            Console.WriteLine("Work finished. Hit Enter to quit");
+            Console.ReadLine();
         }
 
         private void ThreadCaller(Action method)
