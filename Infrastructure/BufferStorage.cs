@@ -59,11 +59,15 @@ namespace VeemExercise.Infrastructure
                 while (!_storage.ContainsKey(readBlockId) && _isOpen)
                 {
                     Monitor.Wait(locker);
+
+                    if(!_storage.ContainsKey(readBlockId) && !_isOpen)
+                    {
+                        return default(T);
+                    }
                 }
                 result = _storage[readBlockId];
                 _storage.Remove(readBlockId);
                 Interlocked.Increment(ref readBlockId);
-                Monitor.PulseAll(locker);
                 return result;
             }
         }
