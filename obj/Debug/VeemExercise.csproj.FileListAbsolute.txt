@@ -1,0 +1,7 @@
+C:\Projects\veem\VeemExercise\obj\Debug\VeemExercise.csproj.CoreCompileInputs.cache
+C:\Projects\veem\VeemExercise\bin\Debug\VeemExercise.exe
+C:\Projects\veem\VeemExercise\bin\Debug\VeemExercise.pdb
+C:\Projects\veem\VeemExercise\obj\Debug\VeemExercise.exe
+C:\Projects\veem\VeemExercise\obj\Debug\VeemExercise.pdb
+C:\Projects\veem\VeemExercise\bin\Debug\VeemExercise.exe.config
+C:\Projects\veem\VeemExercise\obj\Debug\VeemExercise.csprojAssemblyReference.cache
